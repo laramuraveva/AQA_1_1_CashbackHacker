@@ -23,4 +23,13 @@ public class CashbackHackServiceTestJUnit {
 
         Assertions.assertEquals(expected, actual, "Докупить на 900р");
     }
+
+    @Test
+    public void shouldCashback1000() {
+        CashbackHackService cashbackHackService = new CashbackHackService();
+        int expected = 0;
+        int actual = cashbackHackService.remain(1000);
+
+        Assertions.assertEquals(expected, actual, "Выкупили на 1000р");
+    }
 }
